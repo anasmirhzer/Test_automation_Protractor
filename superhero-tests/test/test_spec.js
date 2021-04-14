@@ -1,23 +1,36 @@
-describe('Super Hero Page', function() {
-    it ('should load the correct URL', function() {
+var TestPage = require('../page-objects/test_pages')
+
+
+
+describe('Super Hero Page', function () {
+    var testPage
+    // Before each test do something
+    beforeEach(function () {
+
+        testPage = new TestPage()
 
         browser.ignoreSynchronization = true
-        
+
         // Open URL
         browser.get('file:///Users/amir/GIT/Protractor/superhero/index.html')
 
 
+    })
+
+    afterEach(function () {
+
+    })
+    it('should load the correct URL', function () {
+
         // Enter text into fields : 
-        element(by.id('LoginEmail')).sendKeys('Just testing')
-        element(by.id('LoginPassword')).sendKeys('password')
+        testPage.emailFld.sendKeys('Just testing')
+        testPage.passwordFld.sendKeys('password')
 
         // Verify stuff
-        expect(element(by.id('login-title')).getText()).toEqual('Welcome. Please log In.')
-        expect(element(by.id('LoginEmail')).getAttribute('value')).toEqual('Just testing')
+        expect(testPage.LoginTitleLbl.getText()).toEqual('Welcome. Please log In.')
+        expect(testPage.emailFld.getAttribute('value')).toEqual('Just testing')
 
         //browser.sleep(5000)
 
-})
-
-
+    })
 })
