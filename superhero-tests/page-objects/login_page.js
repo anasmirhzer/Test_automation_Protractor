@@ -11,7 +11,7 @@ passwordFldLbl : {get: function() {return element(by.css('#form-login > div:nth-
 passwordFld: {get: function() {return element(by.id('LoginPassword')) } },
 rememberCheckbox: {get: function() {return element(by.id('RememberLoginCheck')) } },
 rememberCheckLbl : {get: function() {return element(by.css('#form-login > div.mb-3.form-check > label')) } },
-submitBtn : { get: function() {return element(by.buttonText('Submit')) } },
+submitBtn : { get: function() {return element(by.css('#form-login > button')) } },
 loginAlert : {get: function() {return element(by.id('login-alert')) } }
 })
 

@@ -17,7 +17,7 @@ describe('Login Page Tests', function () {
 
 
     })
-    fit('should display all Login page elements', function () {
+    it('should display all Login page elements', function () {
 
         expect(loginPage.loginTitletxt.isDisplayed()).toBe(true)
         expect(loginPage.loginTitletxt.getText()).toEqual('Welcome. Please log In.')
@@ -39,7 +39,7 @@ describe('Login Page Tests', function () {
         expect(loginPage.submitBtn.isDisplayed()).toBe(true)
 
     })
-    fit('should display error message when no username or password are entered', function () {
+    it('should display error message when no username or password are entered', function () {
         loginPage.submitBtn.click()
 
         expect(loginPage.loginAlert.isDisplayed()).toBe(true)
@@ -49,6 +49,8 @@ describe('Login Page Tests', function () {
     it('should display error message when no password are entered', function () {
 
 
+        loginPage.emailFld.sendKeys('testinganas@toto.com')
+
         loginPage.submitBtn.click()
 
         expect(loginPage.loginAlert.isDisplayed()).toBe(true)
@@ -56,11 +58,20 @@ describe('Login Page Tests', function () {
 
     })
     it('should display error message when no username are entered', function () {
+        loginPage.passwordFld.sendKeys('toto123')
 
+        loginPage.submitBtn.click()
+
+        expect(loginPage.loginAlert.isDisplayed()).toBe(true)
+        expect(loginPage.loginAlert.getText()).toEqual('An e-mail and password are required.')
 
     })
     it('should log user in', function () {
+        loginPage.emailFld.sendKeys('testinganas@toto.com')
+        loginPage.passwordFld.sendKeys('toto123')
+        
+        loginPage.submitBtn.click()
 
-
+        // ToDo - verify the Page elements changed 
     })
 })
