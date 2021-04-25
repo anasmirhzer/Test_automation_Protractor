@@ -1,11 +1,11 @@
 var HeaderPage = require('../page-objects/header_page')
-var LoginPage = require('../page-objects/login_page') 
+var LoginPage = require('../page-objects/login_page')
 
-describe('header page', function(){
+describe('header page', function () {
     var loginPage
-    var headerPage 
+    var headerPage
 
-    beforeEach(function(){
+    beforeEach(function () {
 
         headerPage = new HeaderPage()
         loginPage = new LoginPage()
@@ -14,33 +14,33 @@ describe('header page', function(){
         browser.ignoreSynchronization = true
 
         // Open URL
-        browser.get('file:///Users/amir/GIT/Protractor/superhero/index.html') // update to url
-    
+        browser.get('/') // call base url
+        
 
 
     })
-afterEach(function(){
-    
+    afterEach(function () {
 
 
-})
 
-it ('Should contain all header elements', function(){
-    loginPage.emailFld.sendKeys('testinganas@toto.com')
-    loginPage.passwordFld.sendKeys('toto123')
-    
-    loginPage.submitBtn.click()
+    })
 
+    it('Should contain all header elements', function () {
+        loginPage.emailFld.sendKeys('testinganas@toto.com')
+        loginPage.passwordFld.sendKeys('toto123')
 
-    expect(headerPage.PageTitleTxt.isDisplayed()).toBe(true)
-    expect(headerPage.PageTitleTxt.getText()).toEqual('Superhero Roster')
-
-    expect(headerPage.PageImg.isDisplayed()).toBe(true)
-
-    expect(headerPage.DescriptionTxt.isDisplayed()).toBe(true)
-    expect(headerPage.DescriptionTxt.getText()).toEqual('This a super hero web site. we have given you some heroes to strat with. Add as many heroes to start with your dream team.')
+        loginPage.submitBtn.click()
 
 
-})
+        expect(headerPage.PageTitleTxt.isDisplayed()).toBe(true)
+        expect(headerPage.PageTitleTxt.getText()).toEqual('Superhero Roster')
+
+        expect(headerPage.PageImg.isDisplayed()).toBe(true)
+
+        expect(headerPage.DescriptionTxt.isDisplayed()).toBe(true)
+        expect(headerPage.DescriptionTxt.getText()).toEqual('This a super hero web site. we have given you some heroes to strat with. Add as many heroes to start with your dream team.')
+
+
+    })
 
 })

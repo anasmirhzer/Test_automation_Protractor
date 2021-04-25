@@ -12,7 +12,7 @@ describe('Super Hero Page', function () {
         browser.ignoreSynchronization = true
 
         // Open URL
-        browser.get('file:///Users/amir/GIT/Protractor/superhero/index.html')
+        browser.get('/') // call base url
 
 
     })
