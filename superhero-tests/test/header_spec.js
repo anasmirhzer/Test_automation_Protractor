@@ -5,6 +5,8 @@ describe('header page', function(){
     var loginPage
     var headerPage 
 
+    
+
     beforeEach(function(){
 
         headerPage = new HeaderPage()

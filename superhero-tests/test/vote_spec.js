@@ -104,10 +104,11 @@ describe('Vote Page', function () {
         loginPage.passwordFld.sendKeys('toto123')
         loginPage.submitBtn.click()
 
-        //browser.actions().mouseMove(votePage.ironmanLbl).perform();
+        //browser.actions().mouseMove(votePage.submitBtn).perform();
+        
         //votePage.submitBtn.click();
-        //expect(votePage.submitBtn.isDisplayed()).toBe(true)
         expect(votePage.submitBtn.isDisplayed()).toBe(true)
+        //expect(votePage.submitBtn.isDisplayed()).toBe(true)
         
         expect(votePage.xmenVal.getText()).toEqual('10')
 
