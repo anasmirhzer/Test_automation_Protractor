@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="19" time="9.253">
+ <testsuite name="header page" timestamp="2021-04-25T14:18:01" hostname="localhost" time="0.856" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="header page" name="Should contain all header elements" time="0.856" />
+ </testsuite>
+ <testsuite name="Login Page Tests" timestamp="2021-04-25T14:18:01" hostname="localhost" time="1.198" errors="0" tests="5" skipped="0" disabled="0" failures="0">
+  <testcase classname="Login Page Tests" name="should display all Login page elements" time="0.349" />
+  <testcase classname="Login Page Tests" name="should display error message when no username or password are entered" time="0.149" />
+  <testcase classname="Login Page Tests" name="should display error message when no password are entered" time="0.249" />
+  <testcase classname="Login Page Tests" name="should display error message when no username are entered" time="0.207" />
+  <testcase classname="Login Page Tests" name="should log user in" time="0.244" />
+ </testsuite>
+ <testsuite name="Nav test" timestamp="2021-04-25T14:18:03" hostname="localhost" time="4.048" errors="0" tests="8" skipped="0" disabled="0" failures="0">
+  <testcase classname="Nav test" name="should display all Nav elements" time="0.48" />
+  <testcase classname="Nav test" name="should display Worlveine Modal elements" time="0.82" />
+  <testcase classname="Nav test" name="should display Spider-man Modal elements" time="0.852" />
+  <testcase classname="Nav test" name="should display Login page without email and pwd" time="0.294" />
+  <testcase classname="Nav test" name="should display Login page with email and pwd" time="0.366" />
+  <testcase classname="Nav test" name="should display Login page with email and pwd" time="0.392" />
+  <testcase classname="Nav test" name="it should display alert for not found" time="0.426" />
+  <testcase classname="Nav test" name="it should display alert for wolverine" time="0.418" />
+ </testsuite>
+ <testsuite name="Roster Page" timestamp="2021-04-25T14:18:07" hostname="localhost" time="1.449" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Roster Page" name="should display all default roster elements" time="0.885" />
+  <testcase classname="Roster Page" name="it should add a hero on submit" time="0.563" />
+ </testsuite>
+ <testsuite name="Super Hero Page" timestamp="2021-04-25T14:18:08" hostname="localhost" time="0.237" errors="0" tests="1" skipped="0" disabled="0" failures="0">
+  <testcase classname="Super Hero Page" name="should load the correct URL" time="0.237" />
+ </testsuite>
+ <testsuite name="Vote Page" timestamp="2021-04-25T14:18:08" hostname="localhost" time="1.465" errors="0" tests="2" skipped="0" disabled="0" failures="0">
+  <testcase classname="Vote Page" name="should display all elements" time="1.163" />
+  <testcase classname="Vote Page" name="should add 1 to X-men test" time="0.301" />
+ </testsuite>
+</testsuites>
