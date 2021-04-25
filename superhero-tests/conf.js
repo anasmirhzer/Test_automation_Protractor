@@ -1,6 +1,6 @@
 exports.config = {
 
-
+    baseUrl: 'https://nasmirproject.000webhostapp.com',
     framework: 'jasmine2',
 
 

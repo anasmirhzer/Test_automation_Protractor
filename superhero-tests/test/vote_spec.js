@@ -18,7 +18,7 @@ describe('Vote Page', function () {
         browser.ignoreSynchronization = true
 
         // Open URL
-        browser.get('file:///Users/amir/GIT/Protractor/superhero/index.html') // update to url
+        browser.get('/') // call base url
 
 
     })
